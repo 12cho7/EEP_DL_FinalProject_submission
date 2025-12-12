@@ -364,7 +364,37 @@ All code includes detailed comments explaining the implementation.
 
 ---
 
-## 10. License
+## 10. Lessons Learned
+
+Through this project, I learned several valuable lessons about deep learning and fine-tuning:
+
+**Technical Skills:**
+- How to fine-tune large language models using parameter-efficient methods like LoRA, which significantly reduces memory requirements while maintaining model performance
+- The importance of data preprocessing and augmentation - swapping A/B responses helped prevent position bias in the model
+- Working with Hugging Face Transformers library and understanding the training pipeline from data loading to model evaluation
+
+**Practical Insights:**
+- Training deep learning models requires careful hyperparameter tuning - learning rate, batch size, and learning rate scheduling all play crucial roles
+- Early stopping and validation monitoring are essential to prevent overfitting and save computational resources
+- GPU memory management is critical when working with large models - using LoRA instead of full fine-tuning made training feasible on limited resources
+
+**Challenges Faced:**
+- **GPU Quota Limits**: Initially planned to train for more epochs, but hit GPU quota limits on Kaggle/Colab. This taught me to optimize training efficiency and plan resource usage better.
+- **Class Imbalance**: The model showed bias towards predicting certain classes (especially "B wins"). This highlighted the importance of analyzing class distributions and considering techniques like class weighting or better data augmentation.
+- **CSV Parsing Issues**: Encountered `ParserError` when loading data in Colab due to malformed entries. Had to implement robust CSV loading with multiple fallback strategies.
+- **Training Time**: Full training takes 10+ hours even with GPU. This made debugging and iteration slow, emphasizing the need for quick test modes and efficient development workflows.
+
+**Future Improvements:**
+- **Model Architecture**: Try larger models (DeBERTa-large) or ensemble methods to improve performance
+- **Data Augmentation**: Explore more sophisticated augmentation techniques beyond simple A/B swapping
+- **Hyperparameter Tuning**: Systematic hyperparameter search using tools like Optuna or Ray Tune
+- **Class Balancing**: Implement class weights in loss function or use techniques like Focal Loss to address class imbalance
+- **Post-processing**: Further refine predictions using calibration techniques or ensemble with multiple models
+- **Evaluation**: Add more comprehensive evaluation metrics beyond log loss and accuracy (e.g., per-class F1 scores, confusion matrix analysis)
+
+---
+
+## 11. License
 
 This project is for educational purposes only.
 
@@ -373,5 +403,3 @@ This project is for educational purposes only.
 ## Contact
 
 For questions or issues, please refer to the project repository or contact the author.
-
-**Note**: Remember to update the pre-trained model link in section 5 after uploading your model!
