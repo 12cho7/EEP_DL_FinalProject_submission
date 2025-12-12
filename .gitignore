@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Model files (too large for git)
+checkpoints/models_v3/
+models/
+*.bin
+*.safetensors
+
+# Data files (download from Kaggle)
+data/train.csv
+data/test.csv
+*.zip
+
+# Results (generated files)
+results/*.csv
+results/*.json
+!results/README.md
+
+# Logs
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+
+# Outputs
+outputs/*.csv
+!outputs/.gitkeep

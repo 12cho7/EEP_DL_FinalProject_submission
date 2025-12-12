@@ -1,0 +1,18 @@
+[
+  {
+    "prompt": "What is machine learning?",
+    "response_a": "Machine learning is a subset of artificial intelligence that enables computers to learn from data without being explicitly programmed. It involves algorithms that can identify patterns and make decisions based on data.",
+    "response_b": "Machine learning is when computers learn stuff from data."
+  },
+  {
+    "prompt": "Explain neural networks",
+    "response_a": "Neural networks are computing systems inspired by biological neural networks. They consist of interconnected nodes (neurons) organized in layers that process information through weighted connections.",
+    "response_b": "Neural networks are a type of machine learning model that uses layers of nodes to process information, similar to how the human brain works. They can learn complex patterns from data."
+  },
+  {
+    "prompt": "What is the difference between supervised and unsupervised learning?",
+    "response_a": "Supervised learning uses labeled data to train models, while unsupervised learning finds patterns in unlabeled data. Supervised learning is used for classification and regression tasks.",
+    "response_b": "Supervised learning has labels, unsupervised doesn't. That's the main difference."
+  }
+]
+
